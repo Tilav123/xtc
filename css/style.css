@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+/* background-position: center;
+background-repeat: no-repeat;
+background-size: contain; */
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+img {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+span {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    position: relative;
+    color: white;
+    background: var(--greyscale-black-100, #0d0d0e);
+}
+
+.container {
+    width: fit-content;
+    height: auto;
+}
+
+.xo {
+    margin: 50px auto;
+}
+
+.area {
+    width: 458px;
+    height: fit-content;
+    border: 4px solid #343439;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 32px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 4px solid #343439;
+}
+
+.cell:hover {
+    background-color: #090909;
+}
+
+.x {
+    font-size: 102px;
+    color: red;
+    font-weight: 700;
+    animation: 0.5s scale linear;
+    filter: drop-shadow(0px 0px 5px red);
+}
+
+.o {
+    font-size: 102px;
+    color: blue;
+    animation: 0.5s scale linear;
+    font-weight: 700;
+    filter: drop-shadow(0px 0px 5px blue);
+}
+
+.black-block {
+    position: fixed;
+    height: 100vh;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 70%;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    z-index: 19;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.result {
+    font-size: 100px;
+    font-weight: 800;
+}
+
+.new {
+    color: white;
+    border: none;
+    background-color: red;
+    padding: 28px 18px;
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 800;
+    transition: 0.5s;
+    padding: 14px 28px;
+    box-shadow: 0px 0px 15px 0px red;
+}
+
+.new:hover {
+    transform: scale(0.8);
+}
+
+.name-block {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: 45px auto;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nx {
+    color: red;
+    font-weight: 900;
+    filter: drop-shadow(0px 0px 5px red);
+}
+
+.no {
+    color: blue;
+    font-weight: 900;
+    filter: drop-shadow(0px 0px 5px blue);
+}
+
+.name {
+    width: 140px;
+    height: 40px;
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.name:hover {
+    transform: scale(0.8);
+}
+
+.btn-x {
+    font-weight: 900;
+    background-color: red;
+    box-shadow: 0px 0px 15px 0px red;
+}
+
+.btn-o {
+    font-weight: 900;
+    background-color: blue;
+    box-shadow: 0px 0px 15px 0px blue;
+}
+
+.number {
+    font-size: 36px;
+}
+
+@media only screen and (max-width: 700px) {
+    .result {
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .name {
+        width: 110px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cell {
+        width: 120px;
+        height: 120px;
+    }
+    .result {
+        font-size: 50px;
+    }
+
+    .area {
+        width: 368px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .cell {
+        width: 100px;
+        height: 100px;
+    }
+    .result {
+        font-size: 45px;
+    }
+
+    .area {
+        width: 308px;
+    }
+
+    .x {
+        font-size: 82px;
+    }
+
+    .o {
+        font-size: 82px;
+    }
+}
